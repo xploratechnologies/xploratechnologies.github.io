@@ -117,5 +117,60 @@
 	  <script src="js/jquery.textillate.js"></script>
 	  <script type="text/javascript" src="js/materialize.min.js"></script>
 	  <script type="text/javascript" src='/js/scrollReveal.min.js'></script>
+	  <script>
+	       $(document).ready(function(){
+     			 var config = {
+        			easing: 'hustle',
+        			reset:  true,
+        			delay:  'onload',
+        			vFactor: 0.90
+      			}
+
+      window.sr = new scrollReveal( config );
+	      		$(".button-collapse").sideNav();
+	      		$('.whois').textillate({
+				  loop: true,
+				  in: { 
+				    effect: 'fadeInDown',    
+				    delayScale: 0.1,
+				    shuffle: true
+				  }, 
+				  out: { 
+				    effect: 'flash',
+				    reverse: true,
+				    shuffle: true
+				  } 
+				});
+
+	      		$('.title').textillate({
+				  loop: true,
+				  in: { 
+				    effect: 'bounce',    
+				    delayScale: 0.1,
+				    shuffle: true
+				  }, 
+				  out: { 
+				    effect: 'bounce',
+				    reverse: true,
+				    shuffle: true
+				  } 
+				});
+	      		$('.footer').textillate({
+				  loop: true,
+				  in: { 
+				  	viewport: document.getElementById('footer'),
+				    effect: 'fadeIn',    
+				    delayScale: 1,
+				    shuffle: true
+				  }, 
+				  out: { 
+				  	viewport: document.getElementById('footer'),
+				    effect: 'fadeOut',
+				    reverse: true,
+				    shuffle: true
+				  } 
+				});
+    		});
+	  </script>
 	</body>
 </html>
